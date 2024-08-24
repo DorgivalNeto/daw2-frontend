@@ -9,13 +9,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import './style.css'
 
-function BarraDeNavegacao(){
-    
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" className='barra-navegação'>
-          <Toolbar>
-            {
+function BarradeCadastro() {
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" className='barra-cadastro'>
+        <Toolbar>
+          {
             /*<IconButton
               size="large"
               edge="start"
@@ -25,15 +25,14 @@ function BarraDeNavegacao(){
             >
               <MenuIcon />
             </IconButton>*/}
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "white" }}>
-              Olá, Dorgival
-            </Typography>
-            <Button color="inherit" sx= {{ color: "white"}}>Agendar Consulta</Button>
-            
-          </Toolbar>
-        </AppBar>
-      </Box>
-    );
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "white", alignItems: "center", display: "flex", justifyContent: "center" }}>
+            Cadastro
+          </Typography>
+
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }
 
-export default BarraDeNavegacao;
+export default BarradeCadastro;
