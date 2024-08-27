@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 
 import './style.css'
 
+
 function BarraDeNavegacao() {
 
   const [open, setOpen] = React.useState(false);
@@ -81,6 +82,7 @@ function BarraDeNavegacao() {
       </Dialog>
     </Box>
   );
+
 }
 
 

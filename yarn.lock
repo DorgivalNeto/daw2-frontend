@@ -1733,6 +1733,7 @@
   integrity sha512-RtsCt4Geed2/v74sbihWzzRs+HsIQCfclHeORh5Ynu2fS4icIKozcSubwuG7vtzq2uW3fOR1zITSP84TNt2GoQ==
 
 "@mui/icons-material@^5.16.7":
+
   version "5.16.7"
   resolved "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.16.7.tgz"
   integrity sha512-UrGwDJCXEszbDI7yV047BYU5A28eGJ79keTCP4cc74WyncuVrnurlmIRxaHL8YK+LI1Kzq+/JM52IAkNnv4u+Q==
@@ -1860,7 +1861,9 @@
 
 "@remix-run/router@1.19.1":
   version "1.19.1"
+
   resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.19.1.tgz"
+
   integrity sha512-S45oynt/WH19bHbIXjtli6QmwNYvaz+vtnubvNpNDvUOoA/OWh6j1OikIP3G+v5GHdxyC6EXoChG3HgYGEUfcg==
 
 "@rollup/plugin-babel@^5.2.0":
@@ -8271,7 +8274,9 @@ react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
 
 react-router-dom@^6.26.1:
   version "6.26.1"
+
   resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.26.1.tgz"
+
   integrity sha512-veut7m41S1fLql4pLhxeSW3jlqs+4MtjRLj0xvuCEXsxusJCbs6I8yn9BxzzDX2XDgafrccY6hwjmd/bL54tFw==
   dependencies:
     "@remix-run/router" "1.19.1"
@@ -8279,7 +8284,9 @@ react-router-dom@^6.26.1:
 
 react-router@6.26.1:
   version "6.26.1"
+
   resolved "https://registry.npmjs.org/react-router/-/react-router-6.26.1.tgz"
+
   integrity sha512-kIwJveZNwp7teQRI5QmwWo39A5bXRyqpH0COKKmPnyD2vBvDwgFXSqDUYtt1h+FEyfnE8eXr7oe0MxRzVwCcvQ==
   dependencies:
     "@remix-run/router" "1.19.1"
