@@ -27,12 +27,12 @@ function Cardlist(){
     
     return (
         <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650, }} aria-label="simple table">
         <TableHead>
-          <TableRow>
-            <TableCell></TableCell>
-            <TableCell align="right">Data</TableCell>
-            <TableCell align="right">Hora</TableCell>
+          <TableRow >
+            <TableCell sx={{ fontFamily:"inherit", fontSize:"60%",}}>NOME</TableCell>
+            <TableCell align="right" sx={{ fontFamily:"inherit", fontSize:"60%"}}>DATA</TableCell>
+            <TableCell align="right" sx={{ fontFamily:"inherit", fontSize:"60%"}}>HORA</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -2,6 +2,7 @@ import React from "react";
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { Stack } from "@mui/material";
+import Button from '@mui/material/Button';
 
 function CardCadastro() {
 
@@ -10,11 +11,22 @@ function CardCadastro() {
     return (
         <Box
             sx={{
-
+                marginTop: "20px",
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
             }}
         >
-            <Box>
-                <Stack spacing={4}>
+
+            <Box
+                sx={{
+                    width: "100%",
+                    maxWidth: "500px"
+
+                }}
+            >
+                <Stack spacing={2}>
 
                     <TextField required id="nome-usuario" label="Nome" sx={{ display: "flex" }} />
                     <TextField required id="cpf-usuario" label="CPF" sx={{ display: "flex" }} />
@@ -25,10 +37,20 @@ function CardCadastro() {
                     <TextField required id="senha-usuario" label="Senha" sx={{ display: "flex" }} />
                     <TextField required id="confirma-senha-usuario" label="Confirmar Senha" sx={{ display: "flex" }} />
 
+                    <Button variant="contained" sx={{
+                        color: "white",
+                        backgroundColor: "#11BBD9",
+                        fontFamily:"inherit"
+
+                    }}>Cadastrar</Button>;
+
 
                 </Stack>
 
             </Box>
+
+
+
 
 
 

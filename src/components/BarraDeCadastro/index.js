@@ -11,24 +11,28 @@ function BarraDeCadastro(){
     
     return (
         <Box sx={{ flexGrow: 1 }}>
+          
+
         <AppBar position="static" className='barra-navegação'>
           <Toolbar>
             
             
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, 
-                color: "black", 
+                color: "white", 
                 display:"flex", 
                 alignItems:"center",
                 justifyContent: "center",
-                fontSize:"150%"
+                fontSize:"250%",
+                fontFamily:"initial"
                 }}>
               Cadastre-se
             </Typography>
             
           </Toolbar>
         </AppBar>
+        
       </Box>
-    );
+    )
 }
 
 export default BarraDeCadastro;
