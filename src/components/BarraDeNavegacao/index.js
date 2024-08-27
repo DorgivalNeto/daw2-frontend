@@ -46,7 +46,7 @@ function BarraDeNavegacao() {
           },
         }}
       >
-        <DialogTitle>Agende Sua consulta aqui!</DialogTitle>
+        <DialogTitle>Agendar consulta</DialogTitle>
         <DialogContent>
           <DialogContentText>
            
@@ -75,8 +75,8 @@ function BarraDeNavegacao() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">Subscribe</Button>
+          <Button onClick={handleClose}>Cancelar</Button>
+          <Button type="submit">Agendar</Button>
         </DialogActions>
       </Dialog>
     </Box>

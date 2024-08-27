@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Logo from '../../assets/images/logo.png'
+
 
 const createData = (name, Date, Time) => {
     return { name, Date, Time};
@@ -22,6 +24,8 @@ const rows = [
     createData('Naruto Uzumaki', '12/08', '16:30'),
     createData('Sasuke Uchira', '12/08', '17:00'),
   ];
+
+  <img src={Logo} />
 
 function Cardlist(){
     

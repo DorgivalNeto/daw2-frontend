@@ -52,7 +52,8 @@ function TelaLogin() {
                     alignItems: 'center',
                 }}
             >
-                <img src={Logo} />
+                <img src={Logo}/>
+            
 
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                     <TextField
