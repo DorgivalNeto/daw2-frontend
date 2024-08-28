@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 
 import './style.css'
 
+
 function BarraDeNavegacao() {
 
   const [open, setOpen] = React.useState(false);
@@ -69,8 +70,25 @@ function BarraDeNavegacao() {
           
             type="date" 
             margin="dense"
+<<<<<<< HEAD
             id="name"
             name="Data"
+=======
+            id="Paciente"
+            name="Paciente"
+            label="Paciente "
+            type="string"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="Data"
+            name="Data"
+            type="date"
+>>>>>>> main
             fullWidth
             variant="standard"
           />
@@ -79,11 +97,18 @@ function BarraDeNavegacao() {
             required
             margin="dense"
             variant="standard"
+<<<<<<< HEAD
             name="horario"
             
             type="time"
             id="horario"
             autoComplete="current-horario"
+=======
+            name="Horario"
+            type="time"
+            id="Horario"
+            autoComplete="current-Horario"
+>>>>>>> main
           />
         </DialogContent>
         <DialogActions>
@@ -93,6 +118,7 @@ function BarraDeNavegacao() {
       </Dialog>
     </Box>
   );
+
 }
 
 

@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png'
 
 const Copyright = (props) => {
+
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
@@ -50,6 +51,9 @@ function TelaLogin() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    justifyContent:"center",
+                    minWidth:"320px",
+                    maxWidth:"1120px"
                 }}
             >
                 <img src={Logo}/>
@@ -105,6 +109,7 @@ function TelaLogin() {
             <Copyright sx={{ mt: 8, mb: 4 }} />
         </Container>
     </ThemeProvider>);
+
 }
 
 export default TelaLogin;
