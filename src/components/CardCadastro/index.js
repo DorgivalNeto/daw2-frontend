@@ -29,20 +29,22 @@ function CardCadastro() {
                 <Stack spacing={2}>
 
                     <TextField required id="nome-usuario" label="Nome" sx={{ display: "flex" }} />
-                    <TextField required id="cpf-usuario" label="CPF" sx={{ display: "flex" }} />
-                    <TextField required id="sus-usuario" label="Cartão do SUS" sx={{ display: "flex" }} />
-                    <TextField required id="telefone-usuario" label="Telefone" sx={{ display: "flex" }} />
+                    <TextField required id="cpf-usuario" label="CPF" type="number" sx={{ display: "flex" }} />
+                    <TextField required id="idade" label="Idade" sx={{ display: "flex" }} />
+                    <TextField id="fator rh" label="Tipo sanguineo (opcional)" sx={{ display: "flex" }} />
+                    <TextField required id="sus-usuario" label="Cartão do SUS" type="number" sx={{ display: "flex" }} />
+                    <TextField required id="telefone-usuario" label="Telefone" type="number" sx={{ display: "flex" }} />
                     <TextField required id="endereco-usuario" label="Endereço" sx={{ display: "flex" }} />
-                    <TextField required id="email-usuario" label="Email" sx={{ display: "flex" }} />
+                    <TextField required id="email-usuario" label="Email" type="email" sx={{ display: "flex" }} />
                     <TextField required id="senha-usuario" label="Senha" sx={{ display: "flex" }} />
                     <TextField required id="confirma-senha-usuario" label="Confirmar Senha" sx={{ display: "flex" }} />
 
                     <Button variant="contained" sx={{
                         color: "white",
                         backgroundColor: "#11BBD9",
-                        fontFamily:"inherit"
+                        fontFamily: "inherit"
 
-                    }}>Cadastrar</Button>;
+                    }}>Cadastrar</Button>
 
 
                 </Stack>

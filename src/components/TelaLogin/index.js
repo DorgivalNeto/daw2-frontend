@@ -51,6 +51,9 @@ function TelaLogin() {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    justifyContent:"center",
+                    minWidth:"320px",
+                    maxWidth:"1120px"
                 }}
             >
                 <img src={Logo}/>

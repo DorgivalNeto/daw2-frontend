@@ -41,8 +41,8 @@ function BarraDeNavegacao() {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
-            const email = formJson.email;
-            console.log(email);
+            const Data = formJson.Data;
+            console.log(Data);
             handleClose();
           },
         }}
@@ -56,10 +56,20 @@ function BarraDeNavegacao() {
             autoFocus
             required
             margin="dense"
-            id="name"
-            name="email"
-            label="Email "
-            type="email"
+            id="Paciente"
+            name="Paciente"
+            label="Paciente "
+            type="string"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="Data"
+            name="Data"
+            type="date"
             fullWidth
             variant="standard"
           />
@@ -68,11 +78,10 @@ function BarraDeNavegacao() {
             required
             margin="dense"
             variant="standard"
-            name="password"
-            label="Senha"
-            type="password"
-            id="password"
-            autoComplete="current-password"
+            name="Horario"
+            type="time"
+            id="Horario"
+            autoComplete="current-Horario"
           />
         </DialogContent>
         <DialogActions>
