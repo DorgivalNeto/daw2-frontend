@@ -48,15 +48,17 @@ function TelaLogin() {
             <Box
                 sx={{
                     marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent:"center",
-                    minWidth:"320px",
-                    maxWidth:"1120px"
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: "center",
+                        paddingX: { xs: 2, sm: 3 },
+                        paddingY: 4,
+                        borderRadius: 1,
+                        boxShadow: 5,
                 }}
             >
-                <img src={Logo}/>
+                <img src={Logo} alt="Logo" style={{ width: '300px', height: 'auto', marginBottom: '16px' }} />
             
 
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>

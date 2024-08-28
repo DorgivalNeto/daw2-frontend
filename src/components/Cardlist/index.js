@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,11 +7,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Chip } from "@mui/material";
-import Logo from '../../assets/images/logo.png'
 
 
-const createData = (name, Date, Time) => {
-  return { name, Date, Time };
+const createData = (name, date, time) => {
+  return { name, date, time};
 }
 
 const rows = [
@@ -21,51 +20,45 @@ const rows = [
   createData('Cristiano Ronaldo', '12/08', '14:30'),
   createData('Neymar Junior', '12/08', '15:00'),
   createData('Lionel Messi', '12/08', '15:30'),
-  createData('Elo Musk', '12/08', '16:00'),
+  createData('Elon Musk', '12/08', '16:00'),
   createData('Naruto Uzumaki', '12/08', '16:30'),
-  createData('Sasuke Uchira', '12/08', '17:00'),
+  createData('Sasuke Uchiha', '12/08', '17:00'),
 ];
 
-<img src={Logo} />
-
 function Cardlist() {
-
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650, }} aria-label="simple table">
-        <TableHead>
-          <TableRow >
-            <TableCell sx={{ fontFamily: "inherit", fontSize: "60%", }}>NOME</TableCell>
-            <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>DATA</TableCell>
-            <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>HORA</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell component="th" scope="row">
-              <Chip label="Chip Filled" />
-
-              </TableCell>
-              <TableCell align="right" sx={{alignItems:"baseline"}}>{row.Date}</TableCell>
-              <TableCell align="right">{row.Time}</TableCell>
+    <TableContainer component={Paper} sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell sx={{ fontFamily: "inherit", fontSize: { xs: '12px', sm: '14px', md: '16px' } }}>NOME</TableCell>
+              <TableCell align="center" sx={{ fontFamily: "inherit", fontSize: { xs: '12px', sm: '14px', md: '16px' } }}>DATA</TableCell>
+              <TableCell align="center" sx={{ fontFamily: "inherit", fontSize: { xs: '12px', sm: '14px', md: '16px' } }}>HORA</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="center">
+                  {row.date}
+                </TableCell>
+                <TableCell align="center">
+                  {row.time}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
   );
-
 }
 
-
-export default Cardlist; {
-
+export default Cardlist;{
 
 }
