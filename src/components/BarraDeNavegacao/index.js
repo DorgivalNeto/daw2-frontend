@@ -50,30 +50,24 @@ function BarraDeNavegacao() {
         <DialogTitle>Agendar consulta</DialogTitle>
         <DialogContent>
           <DialogContentText>
-           
+
           </DialogContentText>
           <TextField
-           utoFocus
-           required
+            utoFocus
+            required
             margin="dense"
             variant="filled"
             name="Paciente"
             label="Paciente"
             type="usuario"
             id="paciente"
-            
+
           />
 
           <TextField
             autoFocus
             required
-          
-            type="date" 
             margin="dense"
-<<<<<<< HEAD
-            id="name"
-            name="Data"
-=======
             id="Paciente"
             name="Paciente"
             label="Paciente "
@@ -88,7 +82,7 @@ function BarraDeNavegacao() {
             id="Data"
             name="Data"
             type="date"
->>>>>>> main
+
             fullWidth
             variant="standard"
           />
@@ -97,18 +91,11 @@ function BarraDeNavegacao() {
             required
             margin="dense"
             variant="standard"
-<<<<<<< HEAD
             name="horario"
-            
-            type="time"
             id="horario"
             autoComplete="current-horario"
-=======
-            name="Horario"
             type="time"
-            id="Horario"
-            autoComplete="current-Horario"
->>>>>>> main
+
           />
         </DialogContent>
         <DialogActions>
