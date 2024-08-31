@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Chip } from "@mui/material";
-import Logo from '../../assets/images/logo.png'
+
 
 
 const createData = (name, Date, Time) => {
@@ -26,7 +26,7 @@ const rows = [
   createData('Sasuke Uchira', '12/08', '17:00'),
 ];
 
-<img src={Logo} />
+
 
 function Cardlist() {
 
