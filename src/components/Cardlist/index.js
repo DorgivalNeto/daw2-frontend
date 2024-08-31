@@ -67,5 +67,4 @@ function Cardlist() {
 
 export default Cardlist; {
 
-
 }
