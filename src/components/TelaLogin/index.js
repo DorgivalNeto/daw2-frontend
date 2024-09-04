@@ -12,6 +12,8 @@ import Container from '@mui/material/Container';
 import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png'
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -36,6 +38,8 @@ const defaultTheme = createTheme();
 
 function TelaLogin() {
 
+    const navigate = useNavigate();
+
     const handleSubmit = (event) =>
         event.preventDefault();
     const data = new FormData();
@@ -58,7 +62,7 @@ function TelaLogin() {
                         paddingY: 4,
                         borderRadius: 1,
                         boxShadow: 5,
-                        alignItems:"center",
+                        alignItems: "center",
                         marginTop: 3
 
 
@@ -109,6 +113,7 @@ function TelaLogin() {
                                 fullWidth
                                 variant="contained"
                                 sx={{ mt: 3, mb: 2 }}
+                                onClick={() => { navigate("/servico") }}
                             >
                                 Entrar
                             </Button>
@@ -119,8 +124,8 @@ function TelaLogin() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2">
-                                        {"Cadastre-se aqui!"}
+                                    <Link href="#" variant="body2" onClick={() => { navigate("/cadastro") }}>
+                                        Cadastre-se aqui!
                                     </Link>
                                 </Grid>
                             </Grid>

@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Chip } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -29,13 +30,15 @@ const rows = [
 
 
 function Cardlist() {
+  
 
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650, }} aria-label="simple table">
         <TableHead>
           <TableRow >
-            <TableCell sx={{ fontFamily: "inherit", fontSize: "60%", }}>NOME</TableCell>
+            <TableCell  sx={{display:"flex", fontFamily: "inherit", fontSize: "60%", }}>NOME</TableCell>
+            <TableCell sx={{ fontFamily: "inherit", fontSize: "60%" }}></TableCell>
             <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>DATA</TableCell>
             <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>HORA</TableCell>
           </TableRow>
@@ -50,7 +53,7 @@ function Cardlist() {
                 {row.name}
               </TableCell>
               <TableCell component="th" scope="row">
-              <Chip label="Chip Filled" />
+              <Chip label="Prioritario" />
 
               </TableCell>
               <TableCell align="right" sx={{alignItems:"baseline"}}>{row.Date}</TableCell>
@@ -60,6 +63,8 @@ function Cardlist() {
         </TableBody>
       </Table>
     </TableContainer>
+
+
   );
 
 }

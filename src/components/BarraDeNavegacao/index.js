@@ -4,14 +4,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import { useNavigate } from "react-router-dom";
 
 
 import './style.css'
 
 
 function BarraDeNavegacao() {
-
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -30,7 +30,11 @@ function BarraDeNavegacao() {
             Olá, Dorgival
           </Typography>
           <Button color="inherit" sx={{ color: "white", fontFamily: "inherit" }} onClick={handleClickOpen}>Agendar Consulta</Button>
+          <Button color="inherit" onClick={() => { navigate("/login") }} sx={{ color: "white", fontFamily: "inherit" }}> Sair
+
+          </Button>
         </Toolbar>
+
       </AppBar>
       <Dialog
         open={open}
@@ -50,7 +54,7 @@ function BarraDeNavegacao() {
         <DialogTitle>Agendar consulta</DialogTitle>
         <DialogContent>
           <DialogContentText>
-           
+
           </DialogContentText>
           <TextField
             autoFocus
