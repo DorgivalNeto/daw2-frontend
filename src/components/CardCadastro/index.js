@@ -30,7 +30,7 @@ function CardCadastro() {
 
                     <TextField required id="nome-usuario" label="Nome" sx={{ display: "flex" }} />
                     <TextField required id="cpf-usuario" label="CPF" type="number" sx={{ display: "flex" }} />
-                    <TextField required id="idade" label="Idade" sx={{ display: "flex" }} />
+                    <TextField required id="idade" label="Idade" type="date" sx={{ display: "flex" }} />
                     <TextField id="fator rh" label="Tipo sanguineo (opcional)" sx={{ display: "flex" }} />
                     <TextField required id="sus-usuario" label="Cartão do SUS" type="number" sx={{ display: "flex" }} />
                     <TextField required id="telefone-usuario" label="Telefone" type="number" sx={{ display: "flex" }} />

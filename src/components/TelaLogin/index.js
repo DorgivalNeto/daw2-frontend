@@ -12,6 +12,7 @@ import Container from '@mui/material/Container';
 import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png'
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -36,6 +37,8 @@ const defaultTheme = createTheme();
 
 function TelaLogin() {
 
+    const navigate = useNavigate();
+
     const handleSubmit = (event) =>
         event.preventDefault();
     const data = new FormData();
@@ -49,7 +52,7 @@ function TelaLogin() {
     return (
 
         <ThemeProvider theme={defaultTheme}>
-            <Container component="main" maxWidth="xs">
+            <Container component="main" maxWidth="xs" display="flex">
                 <Box
                     sx={{
                         display: "flex",
@@ -58,8 +61,9 @@ function TelaLogin() {
                         paddingY: 4,
                         borderRadius: 1,
                         boxShadow: 5,
-                        alignItems:"center",
-                        marginTop: 3
+                        alignItems: "center",
+                        marginTop: 5,
+                        
 
 
 
@@ -108,6 +112,7 @@ function TelaLogin() {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
+                                onClick={() => {navigate("/servico")}}
                                 sx={{ mt: 3, mb: 2 }}
                             >
                                 Entrar
@@ -119,8 +124,8 @@ function TelaLogin() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2">
-                                        {"Cadastre-se aqui!"}
+                                <Link href="#" variant="body2" onClick={() => {navigate("/cadastro")}}>
+                                        Cadastra-se aqui!
                                     </Link>
                                 </Grid>
                             </Grid>
