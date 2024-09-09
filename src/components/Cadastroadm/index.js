@@ -27,13 +27,22 @@ function Cadastroadm() {
                 <Stack spacing={2}>
 
                     
-                    <TextField required id="nome-usuario" label="Nome" type="text"sx={{ display: "flex" }} />
-                    <TextField required id="cpf-usuario" label="CPF" type="text" max= '11' sx={{ display: "flex" }} />
+                    <p>Nome:</p>
+                    <TextField required id="nome-usuario" name="Nome" type="text"sx={{ display: "flex" }} />
+                    <p>CPF:</p>
+                    <TextField required id="cpf-usuario" name="CPF" type="text" placeholder="000.000.000-00" sx={{ display: "flex" }} />
+                    <p>Data de nascimento:</p>
+                    <TextField required id="idade-usuario" name="Data de nascimento" type="date"sx={{ display: "flex" }} />
+                    <p>Telefone:</p>
                     <TextField requerid id="Telefone-usuario" name="Telefone" type="tel"  placeholder="(11) 99999-9999" sx={{ display: "flex"}} />
-                    <TextField required id="endereco-usuario" label="Endereço" type="text"sx={{ display: "flex" }} />
-                    <TextField required id="email-usuario" label="Email" type="email" sx={{ display: "flex" }} />
-                    <TextField required id="senha-usuario" label="Senha" type="password" sx={{ display: "flex" }} />
-                    <TextField required id="confirma-senha-usuario" label="Confirmar Senha" type="password" sx={{ display: "flex" }} />
+                    <p>Endereço:</p>
+                    <TextField required id="endereco-usuario" name="Endereço" type="text" placeholder="Rua:" sx={{ display: "flex" }} />
+                    <p>Email:</p>
+                    <TextField required id="email-usuario" name="Email" type="email" placeholder="exemplo@gmail.com" sx={{ display: "flex" }} />
+                    <p>Senha:</p>
+                    <TextField required id="senha-usuario" name="Senha" type="password" sx={{ display: "flex" }} />
+                    <p>Confirmar Senha:</p>
+                    <TextField required id="confirma-senha-usuario" name="Confirmar Senha" type="password" sx={{ display: "flex" }} />
 
                     <Button variant="contained" sx={{
                         color: "white",
