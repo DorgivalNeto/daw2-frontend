@@ -30,19 +30,13 @@ function CardCadastro() {
             >
                 <Stack spacing={2}>
 
-                    <TextField required id="nome-usuario" label="Nome" sx={{ display: "flex" }} />
-                    <TextField required id="cpf-usuario" label="CPF" type="number" sx={{ display: "flex" }} />
-                    <TextField required id="idade" label="Idade" type="date" sx={{ display: "flex" }} />
-                    <TextField id="fator rh" label="Tipo sanguineo (opcional)" sx={{ display: "flex" }} />
-                    <TextField required id="sus-usuario" label="Cartão do SUS" type="number" sx={{ display: "flex" }} />
-                    <TextField required id="telefone-usuario" label="Telefone" type="number" sx={{ display: "flex" }} />
-                    <TextField required id="endereco-usuario" label="Endereço" sx={{ display: "flex" }} />
+                    
                     <TextField required id="nome-usuario" label="Nome" type="text"sx={{ display: "flex" }} />
                     <TextField required id="cpf-usuario" label="CPF" type="text" max= '11' sx={{ display: "flex" }} />
                     <TextField required id="idade-usuario" label="Data de nascimento" type="date"sx={{ display: "flex" }} />
                     <TextField id="tipo-Sanguineo" label="Tipo Sanguíneo" type="text"/>
                     <TextField required id="sus-usuario" label="Cartão do SUS" type="text" sx={{ display: "flex" }} />
-                    <TextField id="Telefone-usuario" name="Telefone" type="tel"  placeholder="(11) 99999-9999" sx={{ display: "flex"}} />
+                    <TextField requerid id="Telefone-usuario" name="Telefone" type="tel"  placeholder="(11) 99999-9999" sx={{ display: "flex"}} />
                     <TextField required id="endereco-usuario" label="Endereço" type="text"sx={{ display: "flex" }} />
                     <TextField required id="email-usuario" label="Email" type="email" sx={{ display: "flex" }} />
                     <TextField required id="senha-usuario" label="Senha" type="password" sx={{ display: "flex" }} />
