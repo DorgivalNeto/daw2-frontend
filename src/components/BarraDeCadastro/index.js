@@ -3,11 +3,15 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+
 import { Button } from "@mui/material";
+
+
 import { useNavigate } from "react-router-dom";
 
 
 import './style.css'
+import { Button } from "@mui/material";
 
 function BarraDeCadastro() {
 
@@ -33,6 +37,7 @@ function BarraDeCadastro() {
             Cadastre-se
           </Typography>
           <Typography>
+
             
             <Button color="inherit" onClick={() => { navigate("/login") }}
               sx={{ color: "white", fontFamily: "inherit" }}>
@@ -40,6 +45,7 @@ function BarraDeCadastro() {
             
             </Button>
           </Typography>
+
 
         </Toolbar>
       </AppBar>
