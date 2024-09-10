@@ -66,37 +66,49 @@ function BarraDeNavegacao() {
           <DialogContentText>
 
           </DialogContentText>
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="Paciente"
-            name="Paciente"
-            label="Paciente "
-            type="string"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="Data"
-            name="Data"
-            type="date"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            variant="standard"
-            name="Horario"
-            type="time"
-            id="Horario"
-            autoComplete="current-Horario"
-          />
+
+          <Box>
+
+            <b>Nome do paciente</b>
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="Paciente"
+              name="Paciente"
+              type="string"
+              fullWidth
+              variant="standard"
+            />
+
+            <b>Data da Consulta</b>
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="Data"
+              name="Data da consulta"
+              type="date"
+              fullWidth
+              variant="standard"
+            />
+
+            <b >Horario</b>
+            <TextField
+
+              autoFocus
+              required
+              margin="dense"
+              variant="standard"
+              name="Horario"
+              type="time"
+              id="Horario"
+              autoComplete="current-Horario"
+
+              sx={{marginBottom:"20px"}}
+            />
+
+          </Box>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>

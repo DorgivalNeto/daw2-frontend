@@ -82,7 +82,7 @@ function TelaLogin() {
                         }}
                     >
 
-                        <img src={Logo} alt="Logo" style={{ width: '300px', height: 'auto', marginBottom: '16px' }} />
+                        <img src={Logo} alt="Logo" style={{ width: '350px', height: 'auto', marginBottom: '20px' }} />
                         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                             <TextField
                                 margin="normal"
