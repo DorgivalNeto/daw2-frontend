@@ -72,6 +72,7 @@ function BarraDeNavegacao() {
 
           </DialogContentText>
 
+
           <Box>
 
             <b>Nome do paciente</b>
@@ -114,6 +115,7 @@ function BarraDeNavegacao() {
             />
 
           </Box>
+
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>

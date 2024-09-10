@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 const createData = (name, Date, Time) => {
   return { name, Date, Time };
 }
-
 const rows = [
   createData('Dorgival Neto', '12/08', '13:00'),
   createData('David Torres', '12/08', '13:30'),
