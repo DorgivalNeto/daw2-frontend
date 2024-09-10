@@ -16,7 +16,6 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
 const Copyright = (props) => {
 
     return (
@@ -53,7 +52,7 @@ function TelaLogin() {
     return (
 
         <ThemeProvider theme={defaultTheme}>
-            <Container component="main" maxWidth="xs">
+            <Container component="main" maxWidth="xs" display="flex">
                 <Box
                     sx={{
                         display: "flex",
@@ -63,7 +62,9 @@ function TelaLogin() {
                         borderRadius: 1,
                         boxShadow: 5,
                         alignItems: "center",
-                        marginTop: 3
+          marginTop: 5,
+                        
+
 
 
 
@@ -82,7 +83,7 @@ function TelaLogin() {
                         }}
                     >
 
-                        <img src={Logo} alt="Logo" style={{ width: '300px', height: 'auto', marginBottom: '16px' }} />
+                        <img src={Logo} alt="Logo" style={{ width: '350px', height: 'auto', marginBottom: '20px' }} />
                         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                             <TextField
                                 margin="normal"
@@ -112,6 +113,7 @@ function TelaLogin() {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
+                                onClick={() => {navigate("/servico")}}
                                 sx={{ mt: 3, mb: 2 }}
                                 onClick={() => { navigate("/servico") }}
                             >
@@ -124,8 +126,10 @@ function TelaLogin() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2" onClick={() => { navigate("/cadastro") }}>
-                                        Cadastre-se aqui!
+
+                                <Link href="#" variant="body2" onClick={() => {navigate("/cadastro")}}>
+                                        Cadastra-se aqui!
+
                                     </Link>
                                 </Grid>
                             </Grid>

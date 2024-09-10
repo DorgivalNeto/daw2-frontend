@@ -6,12 +6,15 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 
-
 import './style.css'
 
 
 function BarraDeNavegacao() {
+
+
   const navigate = useNavigate();
+
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -25,20 +28,31 @@ function BarraDeNavegacao() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" className='barra-navegação'>
+
         <Toolbar>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "white", fontFamily: "inherit" }}>
             Olá, Dorgival
           </Typography>
-          <Button color="inherit" sx={{ color: "white", fontFamily: "inherit" }} onClick={handleClickOpen}>Agendar Consulta</Button>
-          <Button color="inherit" onClick={() => { navigate("/login") }} sx={{ color: "white", fontFamily: "inherit" }}> Sair
 
+          <Button color="inherit" sx={{ color: "white", fontFamily: "inherit" }} onClick={handleClickOpen}>Agendar Consulta</Button>
+
+
+          <Button color="inherit" onClick={() => { navigate("/login") }} sx={{ color: "white", fontFamily: "inherit" }}>
+            Sair
           </Button>
+
+
         </Toolbar>
 
       </AppBar>
+
       <Dialog
+
         open={open}
+
         onClose={handleClose}
+
         PaperProps={{
           component: 'form',
           onSubmit: (event) => {
@@ -52,41 +66,54 @@ function BarraDeNavegacao() {
         }}
       >
         <DialogTitle>Agendar consulta</DialogTitle>
+
         <DialogContent>
           <DialogContentText>
 
           </DialogContentText>
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="Paciente"
-            name="Paciente"
-            label="Paciente "
-            type="string"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="Data"
-            name="Data"
-            type="date"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            variant="standard"
-            name="Horario"
-            type="time"
-            id="Horario"
-            autoComplete="current-Horario"
-          />
+
+          <Box>
+
+            <b>Nome do paciente</b>
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="Paciente"
+              name="Paciente"
+              type="string"
+              fullWidth
+              variant="standard"
+            />
+
+            <b>Data da Consulta</b>
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="Data"
+              name="Data da consulta"
+              type="date"
+              fullWidth
+              variant="standard"
+            />
+
+            <b >Horario</b>
+            <TextField
+
+              autoFocus
+              required
+              margin="dense"
+              variant="standard"
+              name="Horario"
+              type="time"
+              id="Horario"
+              autoComplete="current-Horario"
+
+              sx={{marginBottom:"20px"}}
+            />
+
+          </Box>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>
