@@ -1,9 +1,9 @@
 import React from "react";
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import { Stack, div } from "@mui/material";
+import { Stack} from "@mui/material";
 import Button from '@mui/material/Button';
-import { Dialog, handleClose, DialogActions, DialogTitle, DialogContent, DialogContentText, } from '@mui/material';
+import { Dialog,  DialogActions, DialogTitle, DialogContent,  } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { useNavigate } from "react-router-dom";
 
@@ -119,6 +119,7 @@ function CardCadastro() {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
+                                        
                                     }}
                                 >
 

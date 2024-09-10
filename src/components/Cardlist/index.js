@@ -35,7 +35,7 @@ function Cardlist() {
       <Table sx={{ minWidth: 650, }} aria-label="simple table">
         <TableHead>
           <TableRow >
-            <TableCell  sx={{display:"flex", fontFamily: "inherit", fontSize: "60%", }}>NOME</TableCell>
+            <TableCell sx={{ display: "flex", fontFamily: "inherit", fontSize: "60%", }}>NOME</TableCell>
             <TableCell sx={{ fontFamily: "inherit", fontSize: "60%" }}></TableCell>
             <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>DATA</TableCell>
             <TableCell align="right" sx={{ fontFamily: "inherit", fontSize: "60%" }}>HORA</TableCell>
@@ -51,10 +51,10 @@ function Cardlist() {
                 {row.name}
               </TableCell>
               <TableCell component="th" scope="row">
-              <Chip label="Prioritario" />
+                <Chip label="Prioritario" />
 
               </TableCell>
-              <TableCell align="right" sx={{alignItems:"baseline"}}>{row.Date}</TableCell>
+              <TableCell align="right" sx={{ alignItems: "baseline" }}>{row.Date}</TableCell>
               <TableCell align="right">{row.Time}</TableCell>
             </TableRow>
           ))}

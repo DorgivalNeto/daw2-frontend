@@ -2,14 +2,11 @@ import React from "react";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png'
 import { useNavigate } from "react-router-dom";
@@ -92,7 +89,8 @@ function TelaLogin() {
                                 label="Email"
                                 name="email"
                                 autoComplete="email"
-                                autoFocus
+                                autoFocus 
+                                type="email"
                             />
                             <TextField
                                 margin="normal"
@@ -104,10 +102,7 @@ function TelaLogin() {
                                 id="password"
                                 autoComplete="current-password"
                             />
-                            <FormControlLabel
-                                control={<Checkbox value="remember" color="primary" />}
-                                label="Lembrar minha senha"
-                            />
+                           
                             <Button
                                 type="submit"
                                 fullWidth

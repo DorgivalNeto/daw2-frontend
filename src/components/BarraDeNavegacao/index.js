@@ -1,5 +1,5 @@
 import React from "react"
-import { AppBar, Dialog, handleClose, DialogActions, DialogTitle, DialogContent, DialogContentText, TextField } from '@mui/material';
+import { AppBar, Dialog, DialogActions, DialogTitle, DialogContent, DialogContentText, TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -60,7 +60,7 @@ function BarraDeNavegacao() {
           },
         }}
       >
-        <DialogTitle>Agendar consulta</DialogTitle>
+        <DialogTitle sx={{ fontFamily:"monospace", fontSize:"35px"}}>Agendar consulta</DialogTitle>
 
         <DialogContent>
           <DialogContentText>
@@ -105,7 +105,7 @@ function BarraDeNavegacao() {
               id="Horario"
               autoComplete="current-Horario"
 
-              sx={{marginBottom:"20px"}}
+              sx={{display:"flex", flexDirection:"column",}}
             />
 
           </Box>
