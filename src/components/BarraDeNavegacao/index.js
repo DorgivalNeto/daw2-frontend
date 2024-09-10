@@ -5,12 +5,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+
 import './style.css'
 
 
 function BarraDeNavegacao() {
 
+
   const navigate = useNavigate();
+
 
   const [open, setOpen] = React.useState(false);
 
@@ -34,9 +37,11 @@ function BarraDeNavegacao() {
 
           <Button color="inherit" sx={{ color: "white", fontFamily: "inherit" }} onClick={handleClickOpen}>Agendar Consulta</Button>
 
+
           <Button color="inherit" onClick={() => { navigate("/login") }} sx={{ color: "white", fontFamily: "inherit" }}>
             Sair
           </Button>
+
 
         </Toolbar>
 
@@ -66,6 +71,7 @@ function BarraDeNavegacao() {
           <DialogContentText>
 
           </DialogContentText>
+
 
           <Box>
 
@@ -109,6 +115,7 @@ function BarraDeNavegacao() {
             />
 
           </Box>
+
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>

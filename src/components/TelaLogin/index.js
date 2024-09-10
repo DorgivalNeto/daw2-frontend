@@ -59,8 +59,9 @@ function TelaLogin() {
                         borderRadius: 1,
                         boxShadow: 5,
                         alignItems: "center",
-                        marginTop: 5,
+          marginTop: 5,
                         
+
 
 
 
@@ -109,6 +110,7 @@ function TelaLogin() {
                                 variant="contained"
                                 onClick={() => {navigate("/servico")}}
                                 sx={{ mt: 3, mb: 2 }}
+                                onClick={() => { navigate("/servico") }}
                             >
                                 Entrar
                             </Button>
@@ -119,8 +121,10 @@ function TelaLogin() {
                                     </Link>
                                 </Grid>
                                 <Grid item>
+
                                 <Link href="#" variant="body2" onClick={() => {navigate("/cadastro")}}>
                                         Cadastra-se aqui!
+
                                     </Link>
                                 </Grid>
                             </Grid>
