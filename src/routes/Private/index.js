@@ -1,10 +1,15 @@
+
 import PaginaServico from "../../pages/PaginaServico";
 
-const Private ={
+const Private ={ 
     
-    path: '/servico',
-    element: <PaginaServico/>
+        
+            path: '/servico',
+            element: <PaginaServico />
+        
+
+        
     
-};
+}
 
 export default Private;

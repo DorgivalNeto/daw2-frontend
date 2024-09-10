@@ -9,8 +9,12 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Avatar } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png'
+import { useNavigate } from "react-router-dom";
+
+
 
 const Copyright = (props) => {
 
@@ -33,150 +37,124 @@ const defaultTheme = createTheme();
 
 function TelaLogin() {
 
-    const handleSubmit = (event) => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) =>
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-    };
+    const data = new FormData();
+    console.log({
+        email: data.get('email'),
+        password: data.get('password'),
+    });
 
-    return (<ThemeProvider theme={defaultTheme}>
-        <Container component="main" maxWidth="xs">
-<<<<<<< Updated upstream
-            <CssBaseline />
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent:"center",
-                    minWidth:"320px",
-                    maxWidth:"1120px"
-                }}
-            >
-                <img src={Logo}/>
-            
 
-                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                    <TextField
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="email"
-                        label="Email"
-                        name="email"
-                        autoComplete="email"
-                        autoFocus
-                    />
-                    <TextField
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        label="Senha"
-                        type="password"
-                        id="password"
-                        autoComplete="current-password"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Lembrar minha senha"
-                    />
-                    <Button
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        sx={{ mt: 3, mb: 2 }}
+
+    return (
+
+        <ThemeProvider theme={defaultTheme}>
+            <Container component="main" maxWidth="xs" display="flex">
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        paddingX: { xs: 2, sm: 3 },
+                        paddingY: 4,
+                        borderRadius: 1,
+                        boxShadow: 5,
+                        alignItems: "center",
+          marginTop: 5,
+                        
+
+
+
+
+                    }}
+                >
+                    <Box
+                        sx={{
+                            marginTop: 8,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+
+                            justifyContent: "center",
+                            minWidth: "320px",
+                            maxWidth: "1120px"
+                        }}
                     >
-                        Entrar
-                    </Button>
-                    <Grid container>
-                        <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Esqueceu a Senha?
-                            </Link>
-                        </Grid>
-                        <Grid item>
-                            <Link href="#" variant="body2">
-                                {"Cadastre-se aqui!"}
-                            </Link>
-                        </Grid>
-                    </Grid>
+
+                        <img src={Logo} alt="Logo" style={{ width: '350px', height: 'auto', marginBottom: '20px' }} />
+                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email"
+                                name="email"
+                                autoComplete="email"
+                                autoFocus
+                            />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Senha"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                            <FormControlLabel
+                                control={<Checkbox value="remember" color="primary" />}
+                                label="Lembrar minha senha"
+                            />
+                            <Button
+                                type="submit"
+                                fullWidth
+                                variant="contained"
+                                onClick={() => {navigate("/servico")}}
+                                sx={{ mt: 3, mb: 2 }}
+                                onClick={() => { navigate("/servico") }}
+                            >
+                                Entrar
+                            </Button>
+                            <Grid container>
+                                <Grid item xs>
+                                    <Link href="#" variant="body2">
+                                        Esqueceu a Senha?
+                                    </Link>
+                                </Grid>
+                                <Grid item>
+
+                                <Link href="#" variant="body2" onClick={() => {navigate("/cadastro")}}>
+                                        Cadastra-se aqui!
+
+                                    </Link>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                        <CssBaseline />
+                        <Box
+                            sx={{
+                                marginTop: 8,
+                                display: 'flex',
+                                flexDirection: 'center',
+                                alignItems: 'center',
+                            }}
+                        >
+
+
+                        </Box>
+                    </Box>
                 </Box>
-=======
-          <CssBaseline />
-          <Box
-            sx={{
-              marginTop: 8,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main'}}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">
-            
 
-             
-             Sign in
-            </Typography>
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email "
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Senha"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="lembrar me"
-              />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                ENTRAR
-              </Button>
+            </Container>
 
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Esqueceu sua senha?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Não tem uma conta? Inscrever-se"}
-                  </Link>
-                </Grid>
-              </Grid>
->>>>>>> Stashed changes
-            </Box>
-            <Copyright sx={{ mt: 8, mb: 4 }} />
-        </Container>
-    </ThemeProvider>);
+        </ThemeProvider>
 
+
+    );
 }
 
 export default TelaLogin;

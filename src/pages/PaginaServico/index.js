@@ -6,10 +6,10 @@ function PaginaServico(){
     
     return (
         <div>
-            <h1>
+            
                 <BarraDeNavegacao/>
                 <Cardlist/>
-            </h1>
+            
         </div>
     );
 }

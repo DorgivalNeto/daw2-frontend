@@ -5,9 +5,9 @@ function PaginaLogin(){
     
     return (
         <div>
-            <h1>
+            
                 <TelaLogin/>
-            </h1>
+            
         </div>
     );
 }
