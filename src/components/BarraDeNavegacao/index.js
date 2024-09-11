@@ -1,11 +1,6 @@
 import React from "react"
-import { AppBar, Dialog, DialogActions, DialogTitle, DialogContent, DialogContentText, TextField } from '@mui/material';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { AppBar, Box, Toolbar, Typography, Dialog, DialogActions, DialogTitle, DialogContent, DialogContentText, TextField, Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
-
 import './style.css'
 
 
@@ -65,7 +60,7 @@ function BarraDeNavegacao() {
           },
         }}
       >
-        <DialogTitle sx={{ fontFamily:"monospace", fontSize:"35px"}}>Agendar consulta</DialogTitle>
+        <DialogTitle sx={{ fontFamily: "monospace", fontSize: "35px" }}>Agendar consulta</DialogTitle>
 
         <DialogContent>
           <DialogContentText>
@@ -111,7 +106,7 @@ function BarraDeNavegacao() {
               id="Horario"
               autoComplete="current-Horario"
 
-              sx={{display:"flex", flexDirection:"column",}}
+              sx={{ display: "flex", flexDirection: "column", }}
             />
 
           </Box>
