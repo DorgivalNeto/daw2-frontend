@@ -8,8 +8,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo.png';
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../security/Authprovider"
 
 
 
@@ -35,16 +36,13 @@ const defaultTheme = createTheme();
 function TelaLogin() {
 
     const navigate = useNavigate();
+    const { login } = useAuth();
 
-    const handleSubmit = (event) =>
-        event.preventDefault();
-    const data = new FormData();
-    console.log({
-        email: data.get('email'),
-        password: data.get('password'),
-    });
+    const fazerLogin = () => {
 
-
+        login();
+        navigate("/servico")
+    }
 
     return (
 
@@ -59,8 +57,8 @@ function TelaLogin() {
                         borderRadius: 1,
                         boxShadow: 5,
                         alignItems: "center",
-          marginTop: 5,
-                        
+                        marginTop: 5,
+
 
 
 
@@ -81,7 +79,7 @@ function TelaLogin() {
                     >
 
                         <img src={Logo} alt="Logo" style={{ width: '350px', height: 'auto', marginBottom: '20px' }} />
-                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                        <Box component="form" noValidate sx={{ mt: 1 }}>
                             <TextField
                                 margin="normal"
                                 required
@@ -90,7 +88,7 @@ function TelaLogin() {
                                 label="Email"
                                 name="email"
                                 autoComplete="email"
-                                autoFocus 
+                                autoFocus
                                 type="email"
                             />
                             <TextField
@@ -103,14 +101,13 @@ function TelaLogin() {
                                 id="password"
                                 autoComplete="current-password"
                             />
-                           
+
                             <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                onClick={() => {navigate("/servico")}}
+                                onClick={() => { fazerLogin() }}
                                 sx={{ mt: 3, mb: 2 }}
-                                onClick={() => { navigate("/servico") }}
                             >
                                 Entrar
                             </Button>
@@ -122,7 +119,7 @@ function TelaLogin() {
                                 </Grid>
                                 <Grid item>
 
-                                <Link href="#" variant="body2" onClick={() => {navigate("/cadastro")}}>
+                                    <Link href="#" variant="body2" onClick={() => { navigate("/cadastro") }}>
                                         Cadastra-se aqui!
 
                                     </Link>

@@ -14,6 +14,8 @@ const Public = {
             path: 'login',
             element: <PaginaLogin />
         }
+
+        
     ]
 
 }
