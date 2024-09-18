@@ -9,6 +9,11 @@ export const createUsuario = async (Usuario) =>{
 
 };
 
+export const login = async (loginData) =>{
+    return await api.post("/auth/local", loginData);
+};
+
 export default{
+    login,
     createUsuario
 };

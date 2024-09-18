@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -11,7 +11,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../security/Authprovider"
-
+import api from "../../services/api";
+import { Email, Password } from "@mui/icons-material";
 
 
 const Copyright = (props) => {
@@ -38,7 +39,29 @@ function TelaLogin() {
     const navigate = useNavigate();
     const { login } = useAuth();
 
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")
+
     const fazerLogin = () => {
+
+        if (email.trim() != "" && senha.trim() != "") {
+            api.login(
+
+                {
+                    identifier: email,
+                    password: senha,
+                }
+            ).
+            then((response) => {
+                login (response.data.jwt)
+                navigate("/inicio")
+
+                
+     }).catch((error) => { 
+        console.log(error)
+     })
+        }
+
 
         login();
         navigate("/servico")
@@ -80,6 +103,9 @@ function TelaLogin() {
 
                         <img src={Logo} alt="Logo" style={{ width: '350px', height: 'auto', marginBottom: '20px' }} />
                         <Box component="form" noValidate sx={{ mt: 1 }}>
+
+
+
                             <TextField
                                 margin="normal"
                                 required
@@ -91,6 +117,7 @@ function TelaLogin() {
                                 autoFocus
                                 type="email"
                             />
+
                             <TextField
                                 margin="normal"
                                 required
@@ -101,6 +128,7 @@ function TelaLogin() {
                                 id="password"
                                 autoComplete="current-password"
                             />
+
 
                             <Button
                                 type="submit"
