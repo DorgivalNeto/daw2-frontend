@@ -1,9 +1,9 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../Authprovider"
+import UseStorage from "../Authprovider/useStorage";
 
 const ProtectedRoute = ({ element }) => {
-    const { token } = useAuth();
+    const { token } = UseStorage();
 
     return token ? element: <Navigate to="/login" />
 }

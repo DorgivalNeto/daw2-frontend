@@ -10,9 +10,9 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Logo from '../../assets/images/logo.png';
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../security/Authprovider"
+import {useStorege } from "../../security/Authprovider"
 import api from "../../services/api";
-import { Email, Password } from "@mui/icons-material";
+
 
 
 const Copyright = (props) => {
@@ -37,7 +37,7 @@ const defaultTheme = createTheme();
 function TelaLogin() {
 
     const navigate = useNavigate();
-    const { login } = useAuth();
+    const { login } = useStorege();
 
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
